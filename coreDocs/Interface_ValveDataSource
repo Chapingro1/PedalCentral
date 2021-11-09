@@ -1,0 +1,34 @@
+ValveDataSource -- Interface
+    ValveDataSource needs to be implemented as a map structure which can hold Valve objects at given indices. Methods
+    that seem to update the class always return new class instances.
+
+
+Data:
+    From Constructor:
+    1. private valveMap - *Note* - this should be implemented at the Platform level.
+
+Does:
+
+    1. getValve(index) :: (Int) -> Valve?
+        returns the Valve object located at index.
+        null values.
+
+    2. getValves() :: () -> List<Valve?>
+        returns a list of Valve objects in order of index. List length will be one greater than the highest index in
+        the valveMap. As with ::getValve, indices not represented in the valveMap will be returned as null values.
+
+    2. addValve(index, valve) :: (Int, Valve) -> ValveDataSource
+        returns a new ValveDataSource with valve included at index. If a valve is located in this index, it will be
+        overwritten
+
+    3. addValves(nullableValvesList) :: (List<Valve?>) -> ValveDataSource
+        returns a new ValveDataSource with valve indices matching their list index. Added valves located at their
+        valveMap index will overwrite pre-existing valves but valves without index conflict will be kept.
+
+    4. removeValve(index) :: Int -> ValveDataSource
+        returns a newValveDataSource without the Valve object at index.
+
+Doesn't:
+    1. Allow getValve(index) if the key 'index' does not exist in the valveMap. Throw IllegalArgumentException
+
+    2. Allow removeValve(index) if the key 'index' does not exist in valveMap. Throw IllegalArgumentExceptioneption

@@ -1,0 +1,10 @@
+Preset -- Entity
+
+
+Data:
+    From Constructor:
+        1. private val outputMap : Map<Valve, Double>
+Does:
+    1. getOutputs :: (Unit) -> Map<Valve, Double>
+
+Doesn't:

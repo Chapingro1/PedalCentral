@@ -1,0 +1,11 @@
+Valve -- Entity
+
+Data:
+    From Constructor:
+    1. val pin : Int
+
+Does:
+    Getters
+    1. pin :: () -> Int
+
+Doesn't:
