@@ -1,4 +1,3 @@
-# Project exclude paths
 /.gradle/
 /build/bin/
 /build/classes/
@@ -8,5 +7,4 @@
 /build/reports/
 /build/test-results/
 /build/tmp/
-
 /.idea/
