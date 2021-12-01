@@ -1,0 +1,39 @@
+---
+#include <stdio.h>
+
+// LIST
+typedef struct {
+    int (*values)[20];
+    int length;
+} ListBuilder;
+
+int dummyArray[5] = {0, 1, 2, 3, 4};
+
+// MAP
+typedef struct {
+    int key;
+    int value;
+} MapEntry;
+
+typedef struct {
+    MapEntry entries[20];
+} MapBuilder;
+
+// OTHER TESTING
+typedef struct {
+  int a;
+  double b;
+} MyStruct;
+
+MyStruct x = {5, 0.2};
+
+void passStructToC(MyStruct s) {
+    char str[100];
+    printf("a was %d", s.a);
+    gets(str);
+}
+
+void waitForInput() {
+    char str[100];
+    gets(str);
+}

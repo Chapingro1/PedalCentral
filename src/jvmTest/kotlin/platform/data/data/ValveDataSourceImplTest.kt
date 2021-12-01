@@ -1,10 +1,8 @@
-package platform.data
+package platform.data.data
 
 import core.domain.Valve
 import core.domain.ValveTest
 import org.junit.jupiter.api.DisplayName
-import org.junit.jupiter.api.Test
-import java.lang.IllegalArgumentException
 import kotlin.test.*
 
 internal class ValveDataSourceImplTest{
@@ -32,7 +30,7 @@ internal class ValveDataSourceImplTest{
 
     @Test
     @DisplayName("getValves returns a list of Valve? ordered by valveMap index.")
-    fun `getValues returns a list of Valve? ordered by valveMap index`(){
+    fun `getValues returns a list of Maybe Valve ordered by valveMap index`(){
         assertIs<List<Valve?>>(valveDataSourceImpl4.getValves())
     }
 

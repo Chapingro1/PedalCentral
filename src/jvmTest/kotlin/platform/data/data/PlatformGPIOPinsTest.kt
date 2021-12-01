@@ -1,4 +1,4 @@
-package platform.data
+package platform.data.data
 
 import platform.data.PlatformGPIOPins.*
 import org.junit.jupiter.api.DisplayName
