@@ -84,3 +84,5 @@ fun <T> listBuilder(struct: ListBuilder) : List<T> {
 fun printList(list : List<Int>) {
     println("Kotlin: List is $list")
 }
+
+val newPresetDSImpl = PresetDataSourceImpl(mapOf<Int, Double>(0 to 0.0))

@@ -17,16 +17,15 @@ Does:
         returns a map which keys each Preset object by index.
 
     2. addPreset(index, preset) :: (Int, Preset) -> PresetDataSourceImpl
-        returns a new PresetDataSourceImpl with presetMap value overwritten at the index provided by
+        returns a new PresetDataSourceImpl with presetMap value overwritten at the index with
         the provided Preset object. *Note* Presets are not removed unless 'removePreset' is called
         or they are overwritten.
 
-
-    3. addPresets(presetMap) :: (Map<Int, Preset>) -> PresetDataSourceImpl
+    3. addPresets(newPresetMap) :: (Map<Int, Preset>) -> PresetDataSourceImpl
         returns a new PresetDataSourceImpl with presetMap overwritten by the provided presetMap. *Note* Presets are not
         removed unless 'removePreset' is called or they are overwritten.
 
-    4. removePreset(index) :: Int -> PresetDataSourceImpl
+    4. removePreset(index) :: (Int) -> PresetDataSourceImpl
         returns a new PresetDataSourceImpl without the Preset object at index.
 
 Doesn't:
