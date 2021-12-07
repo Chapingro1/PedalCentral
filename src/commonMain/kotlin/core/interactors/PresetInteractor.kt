@@ -1,5 +1,7 @@
 package core.interactors
 
+import core.data.PresetRepository
+
 object PresetInteractor {
 
     fun getPresetMapAt(presetRepo: PresetRepository, presetId: Int): Map<Int, Double> {
