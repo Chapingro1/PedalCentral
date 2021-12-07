@@ -11,3 +11,5 @@ Doesn't:
     *Checked at Init*
     1. allow Keys for outputMap to be Negative Integers -> IllegalArgumentException
     2. allow Values for outputMap to be outside the range [0.0, 1.0] -> IllegalArgumentException
+
+

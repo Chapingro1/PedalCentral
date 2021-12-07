@@ -1,6 +1,5 @@
 package core.domain
 
-import kotlin.reflect.typeOf
 import kotlin.test.*
 
 internal class PresetTest{

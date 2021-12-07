@@ -2,7 +2,6 @@ package platform.data
 
 import core.domain.Preset
 import core.domain.PresetTest
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.*
 import kotlin.test.assertIs
 
