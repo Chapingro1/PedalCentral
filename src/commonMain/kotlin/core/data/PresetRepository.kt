@@ -2,7 +2,7 @@ package core.data
 
 import core.domain.Preset
 
-data class PresetRepository(val presetDataSource: PresetDataSource) {
+data class PresetRepository(private val presetDataSource: PresetDataSource) {
 
     fun getPreset(index : Int) : Preset = presetDataSource.getPreset(index)
 
@@ -16,5 +16,6 @@ data class PresetRepository(val presetDataSource: PresetDataSource) {
 
     fun removePreset(index : Int) : PresetRepository =
         PresetRepository(presetDataSource.removePreset(index))
+
 
 }
