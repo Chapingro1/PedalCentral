@@ -3,7 +3,7 @@ package platform.data
 import core.data.PresetDataSource
 import core.domain.Preset
 
-data class PresetDataSourceImpl(val presetMap : Map<Int, Preset>) : PresetDataSource {
+data class PresetDataSourceImpl(private val presetMap : Map<Int, Preset>) : PresetDataSource {
 
 
     override fun getPreset(index : Int) : Preset = presetMap[index] ?:

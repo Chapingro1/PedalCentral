@@ -1,9 +1,34 @@
 PresetRepository -- Entity
 
+    This class is a mask for the PresetDataSource Interface. Instances are Immutable and methods only return new
+    instances of PresetRepository
+
+
 Data:
     From Constructor:
         1. private val presetDataSource : PresetDataSource
+
 Does:
-    1. getOutputs :: (Unit) -> Map<Valve, Double>
+
+    1. getPreset(index) :: (Int) -> Preset
+        returns the Preset object located at index.
+
+    2. getPresets() :: () -> Map<Int, Preset>
+        returns a map which keys each Preset object by index.
+
+    2. addPreset(index, preset) :: (Int, Preset) -> PresetRepository
+        returns a new PresetRepository with presetMap value overwritten at the index with
+        the provided Preset object. *Note* Presets are not removed unless 'removePreset' is called
+        or they are overwritten.
+
+    3. addPresets(newPresetMap) :: (Map<Int, Preset>) -> PresetRepository
+        returns a new PresetRepository with presetMap overwritten by the provided presetMap. *Note* Presets are not
+        removed unless 'removePreset' is called or they are overwritten.
+
+    4. removePreset(index) :: (Int) -> PresetRepository
+        returns a new PresetRepository without the Preset object at index.
 
 Doesn't:
+    1. Allow getPreset(index) if the key 'index' does not exist in the presetMap. Throw IllegalArgumentException
+
+    2. Allow removePreset(index) if the key 'index' does not exist in presetMap. Throw IllegalArgumentException

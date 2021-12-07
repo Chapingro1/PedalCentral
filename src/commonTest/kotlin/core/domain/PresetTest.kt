@@ -1,7 +1,7 @@
 package core.domain
 
-import kotlin.reflect.typeOf
-import kotlin.test.*
+import kotlin.test.Test
+import kotlin.test.assertIs
 
 internal class PresetTest{
 
