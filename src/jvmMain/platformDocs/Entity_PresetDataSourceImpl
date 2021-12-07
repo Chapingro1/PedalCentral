@@ -1,0 +1,35 @@
+PresetDataSourceImpl : PresetDataSource -- Entity
+
+    This class implements the PresetDataSource Interface. Instances are Immutable and methods only return new
+    instances of PresetDataSourceImpl
+
+
+Data:
+    1. private presetMap : Map<Int, Preset>
+        stores Preset objects at a specified index.
+
+Does:
+
+    1. getPreset(index) :: (Int) -> Preset
+        returns the Preset object located at index.
+
+    2. getPresets() :: () -> Map<Int, Preset>
+        returns a map which keys each Preset object by index.
+
+    2. addPreset(index, preset) :: (Int, Preset) -> PresetDataSourceImpl
+        returns a new PresetDataSourceImpl with presetMap value overwritten at the index provided by
+        the provided Preset object. *Note* Presets are not removed unless 'removePreset' is called
+        or they are overwritten.
+
+
+    3. addPresets(presetMap) :: (Map<Int, Preset>) -> PresetDataSourceImpl
+        returns a new PresetDataSourceImpl with presetMap overwritten by the provided presetMap. *Note* Presets are not
+        removed unless 'removePreset' is called or they are overwritten.
+
+    4. removePreset(index) :: Int -> PresetDataSourceImpl
+        returns a new PresetDataSourceImpl without the Preset object at index.
+
+Doesn't:
+    1. Allow getPreset(index) if the key 'index' does not exist in the presetMap. Throw IllegalArgumentException
+
+    2. Allow removePreset(index) if the key 'index' does not exist in presetMap. Throw IllegalArgumentException

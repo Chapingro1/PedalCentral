@@ -39,4 +39,6 @@ fun startupPreset(valveIDs: CArrayPointer<IntVar>, valveOutputs : CArrayPointer<
 
 }
 
+var valve1 = Valve(1)
+
 

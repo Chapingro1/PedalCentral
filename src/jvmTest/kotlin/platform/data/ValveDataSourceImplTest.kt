@@ -1,4 +1,4 @@
-package platform.data.data
+package platform.data
 
 import core.domain.Valve
 import core.domain.ValveTest

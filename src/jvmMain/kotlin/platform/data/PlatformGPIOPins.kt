@@ -1,4 +1,4 @@
-package platform.data.data
+package platform.data
 
 import core.data.GPIOPins
 

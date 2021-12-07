@@ -3,8 +3,11 @@ Preset -- Entity
 
 Data:
     From Constructor:
-        1. private val outputMap : Map<Valve, Double>
+        1. private val outputMap : Map<Int, Double>
 Does:
-    1. getOutputs :: (Unit) -> Map<Valve, Double>
+    1. getOutputs :: (Unit) -> Map<Int, Double>
 
 Doesn't:
+    *Checked at Init*
+    1. allow Keys for outputMap to be Negative Integers -> IllegalArgumentException
+    2. allow Values for outputMap to be outside the range [0.0, 1.0] -> IllegalArgumentException

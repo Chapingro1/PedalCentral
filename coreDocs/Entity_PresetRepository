@@ -1,0 +1,9 @@
+PresetRepository -- Entity
+
+Data:
+    From Constructor:
+        1. private val presetDataSource : PresetDataSource
+Does:
+    1. getOutputs :: (Unit) -> Map<Valve, Double>
+
+Doesn't:
