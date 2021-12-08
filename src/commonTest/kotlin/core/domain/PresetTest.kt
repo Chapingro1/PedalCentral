@@ -7,7 +7,7 @@ internal class PresetTest{
 
     @Test
     fun `The Preset constructor requires a presetMap`(){
-        assertIs<Preset>(Preset(presetMap0))
+        assertIs<Preset>(Preset(outputMap0))
     }
 
     @Test
@@ -17,41 +17,41 @@ internal class PresetTest{
 
     companion object{
         
-        val presetMap0 = mapOf(
+        val outputMap0 = mapOf(
             0 to 0.0)
         
-        val preset0 = Preset(presetMap0)
+        val preset0 = Preset(outputMap0)
 
         
-        val presetMap1 = mapOf(
+        val outputMap1 = mapOf(
             0 to 0.0,
             2 to 1.0
         )
         
-        val preset1 = Preset(presetMap1)
+        val preset1 = Preset(outputMap1)
 
 
-        val presetMap2 = mapOf(
+        val outputMap2 = mapOf(
             0 to 0.0,
             1 to 0.1,
             2 to 0.2,
             3 to 0.3
         )
         
-        val preset2 = Preset(presetMap2)
+        val preset2 = Preset(outputMap2)
         
         
-        val presetMap3 = mapOf(
+        val ouputMap3 = mapOf(
             28 to 0.28,
             13 to 0.69,
             18 to 0.0231,
             2 to 1.0
         )
         
-        val preset3 = Preset(presetMap3)
+        val preset3 = Preset(ouputMap3)
         
         
-        val presetMap4 = mapOf(
+        val outputMap4 = mapOf(
             0 to 0.001,
             1 to 0.002,
             3 to 0.004,
@@ -59,13 +59,13 @@ internal class PresetTest{
             23 to 0.999999999999999999999999999999999999999999999999
         )
         
-        val preset4 = Preset(presetMap4)
+        val preset4 = Preset(outputMap4)
         
         
-        val presetMap5 = mapOf(
+        val outputMap5 = mapOf(
             5 to 0.50)
         
-        val preset5 = Preset(presetMap5)
+        val preset5 = Preset(outputMap5)
         
     }
 }
