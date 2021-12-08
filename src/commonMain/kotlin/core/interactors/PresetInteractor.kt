@@ -24,5 +24,4 @@ object PresetInteractor {
         return keys[newIndex]
     }
 
-    // New Comment
 }
