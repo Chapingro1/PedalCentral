@@ -19,7 +19,8 @@ internal class PresetTest{
     companion object{
         
         val outputMap0 = mapOf(
-            0 to 0.0)
+            0 to 0.0
+        )
         
         val preset0 = Preset(outputMap0)
 

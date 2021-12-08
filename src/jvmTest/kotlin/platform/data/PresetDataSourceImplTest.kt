@@ -3,7 +3,9 @@ package platform.data
 import core.domain.Preset
 import core.domain.PresetTest
 import org.junit.jupiter.api.*
+import kotlin.test.assertEquals
 import kotlin.test.assertIs
+import kotlin.test.assertNotEquals
 
 internal class PresetDataSourceImplTest {
 
@@ -11,7 +13,7 @@ internal class PresetDataSourceImplTest {
     @Test
     @DisplayName("Create Instance of PresetDataSourceImpl with presetMap.")
     fun `Create Instance of PresetDataSourceImpl with presetMap`(){
-        assertIs<PresetDataSourceImpl>(PresetDataSourceImplTest.presetDataSourceImpl1)
+        assertIs<PresetDataSourceImpl>(presetDataSourceImpl1)
     }
 
 
@@ -36,7 +38,7 @@ internal class PresetDataSourceImplTest {
         assertIs<Map<Int, Preset>>(presetDataSourceImpl3.getPresets())
     }
 
-    //Show acutal use!!
+    //Show actual use!!
 
 
     //addPreset(index : Int, preset : Preset) : PresetDataSourceImpl
