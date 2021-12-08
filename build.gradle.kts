@@ -17,6 +17,10 @@ kotlin {
         testRuns["test"].executionTask.configure {
             useJUnitPlatform()
         }
+        compilations {
+            val main by getting
+            val test by getting
+        }
     }
 
     linuxArm32Hfp("native"){
