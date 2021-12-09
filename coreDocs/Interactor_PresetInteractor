@@ -1,0 +1,26 @@
+PresetInteractor -- Interactor
+
+Data:
+    None
+
+Does:
+
+    1. getPresetMapAt(presetRepo, presetId) :: (PresetRepository, Int) -> Map<Int, Double>
+        returns the output map from the preset at the given presetId from the given repository
+
+    2. previousPresetId(presetRepo, presetId) :: (PresetRepository, Int) -> Int
+        returns the biggest presetId smaller than the given presetId in the given PresetRepository.
+        previousPresetId wraps and returns the largest presetId if given the smallest presetId.
+
+    3. nextPresetId(presetRepo, presetId) :: (PresetRepository, Int) -> Int
+        returns the smallest presetId bigger than the given presetId in the given PresetRepository.
+        nextPresetId wraps and returns the smallest presetId if given the largest presetId.
+
+Doesn't:
+    1. Allow previousPresetId(presetRepo, presetId) if the presetId does not exist in the presetRepo. Throw IllegalArgumentException
+
+    2. Allow nextPresetId(presetRepo, presetId) if the presetId does not exist in the presetRepo. Throw IllegalArgumentException
+
+
+
+
