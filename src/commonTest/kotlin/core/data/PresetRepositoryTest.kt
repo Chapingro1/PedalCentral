@@ -2,7 +2,7 @@ package core.data
 
 import core.domain.Preset
 import core.domain.PresetTest
-import platform.data.PresetDataSourceImplTest
+import platform.PresetDataSourceImplTest
 import kotlin.test.*
 
 internal class PresetRepositoryTest{
